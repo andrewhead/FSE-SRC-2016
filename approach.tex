@@ -1,3 +1,5 @@
+\textbf{Shorten to three paragraphs.}
+
 The objective for this study is to answer these questions.
 First, what channels are most helpful to developers predicting the quality of community and documentation available for packages?
 Second, what information and indications do they use from these channels to answer these questions?
@@ -12,16 +14,15 @@ We asked developers to attempt to answer six questions about the quality of the 
 \setlength{\itemsep}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\parsep}{0pt}
+\item Which package's \textbf{developers can you better trust} to make reliable, usable software?
+\item Which community will be more \textbf{welcoming} when responding to questions you ask?
 \item Which package will have \textbf{better How-To documentation} for all the tasks you will want to do?
+\item Which package was better designed for users with \textbf{your technical knowledge} and goals?
 \item For which package are other developers more likely to answer questions you ask as \textbf{fast} as you need them to?
 \item Which package's documentation will be more \textbf{up-to-date} with the code?
-\item Which community will be more \textbf{welcoming} when responding to questions you ask?
-\item Which package's \textbf{developers can you better trust} to make reliable, usable software?
-\item Which package was better designed for users with \textbf{your technical knowledge} and goals?
 \end{enumerate}
 These questions came from a variety of sources referenced in our background work and from our peers.
 We had a hunch that there might be some appropriate information sources online for answering each of these questions, but we didn't know for sure, or the variety of different approaches that developers might take.
-
 For each question, participants were given six minutes to use the web to learn more about the two packages they were comparing, in order to arrive at an informed answer.
 \textbf{Warmup task}.
 
@@ -86,6 +87,7 @@ We think that this is okay because we don't let participants view Google and so 
 Furthermore, we don't worry about biasing the results for individual packages for the reasons in the paragraph above.
 \fi
 
+\if 0
 To obtain a list of packages, I suggest fetching packages that participants are not certain to know (i.e.\ ones that aren't ubiquitous within the Node.js ecosystem), and that represent varying levels of popularity online.
 We make a heuristic for packages that have some documentation online.
 We look for the pattern \texttt{npm install <package\_name>} in all Stack Overflow posts tagged ``node.js'' or ``npm,'' and extract all distinct package names, counting how often that package name appears.
@@ -96,37 +98,37 @@ Some participants may already know about some of the packages and authors that w
 We ask all participants to check boxes to report whether they have heard of and whether they have used each package.
  We can use this to exclude some ratings from our analysis.
  If they know of authors, this might not be problematic, as this could be indicative of a need to summarize packages in terms of those who created them.
+\fi
+\if 0
+\subsection{Measures}
 
- \subsection{Measures}
+\begin{itemize}
+\item their confidence in their judgment
+\item whether a participant completes a task in less time than was available 
+\item ratings on a Likert scale of each quality question
+\end{itemize}
 
- \begin{itemize}
- \item their confidence in their judgment
- \item whether a participant completes a task in less time than was available 
- \item ratings on a Likert scale of each quality question
- \end{itemize}
+There are auxiliary questions that it would be useful for us to report on:
+* How confident are participants of their responses?
+* How does this confidence vary by channel and question?
+* How appropriate does this channel's content and organization seem for answering this question?
+* For each package, how often to participants end up looking at documentation that's not about that package at all (by accident)?
 
- \if 0
- There are auxiliary questions that it would be useful for us to report on:
- * How confident are participants of their responses?
- * How does this confidence vary by channel and question?
- * How appropriate does this channel's content and organization seem for answering this question?
- * For each package, how often to participants end up looking at documentation that's not about that package at all (by accident)?
- \fi
+\subsection{Analysis}
 
- \subsection{Analysis}
+We use the technique described in~\cite{kaptein_powerful_2010} to assess whether there is a difference between the distributions of confidence scores for both factors.
+According to the recommendations from\footnote{\url{http://yatani.jp/teaching/doku.php?id=hcistats:kruskalwallis}}, we use a Mann-Whitney test for post-hoc pairwise comparisons.
+In this way, we report which channels appear to be most capable of answering each question.
 
- We use the technique described in~\cite{kaptein_powerful_2010} to assess whether there is a difference between the distributions of confidence scores for both factors.
- According to the recommendations from\footnote{\url{http://yatani.jp/teaching/doku.php?id=hcistats:kruskalwallis}}, we use a Mann-Whitney test for post-hoc pairwise comparisons.
- In this way, we report which channels appear to be most capable of answering each question.
+Confidence scores will also be useful in initially assessing whether there is any distribution for which confidence is more than positive.
+If this assumption holds, then we can assert that there indeed are some channels for which such quality assessments are possible.
 
- Confidence scores will also be useful in initially assessing whether there is any distribution for which confidence is more than positive.
- If this assumption holds, then we can assert that there indeed are some channels for which such quality assessments are possible.
+We do a qualitative coding of participants' comments for evidence of the cues and challenges of using each channel to answer these question; we will not look for quantitative significance in comments.
 
- We do a qualitative coding of participants' comments for evidence of the cues and challenges of using each channel to answer these question; we will not look for quantitative significance in comments.
+\subsection{Limitations}
 
- \subsection{Limitations}
+We report some biases in the study design.
+One of the reasons that we include web search is because we already have some code written to collect data about web search, and an on-going theme of our work is to understand how to help programmers search better.
 
- We report some biases in the study design.
- One of the reasons that we include web search is because we already have some code written to collect data about web search, and an on-going theme of our work is to understand how to help programmers search better.
-
- The script that we used to generate forms for our study can be found online at \url{http://tinyurl.com/support-views-study-script}.
+The script that we used to generate forms for our study can be found online at \url{http://tinyurl.com/support-views-study-script}.
+\fi
