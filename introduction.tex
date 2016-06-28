@@ -1,0 +1,33 @@
+Research problem and motivation.
+Also, include background and related work.
+
+Software developers often make the rational decision to reuse software to save time.
+This has been true for a long time~\cite{mili_reusing_1995}.
+Researchers have observed that given a task, developers can assemble working programs through components found entirely on the web, together with their prior knowledge (e.g.,~\cite{brandt_two_2009}).
+This behavior is not uncommon---foraging for information online has been observed in particular for a variety of non-professional programmers~\cite{brandt_opportunistic_2008} and validated through the queries for a help search engine for developer tools~\cite{brandt_two_2009}.
+
+The past five decades of software engineering have seen the rise of digital media for programmer communication and information sharing.
+As of the '90s, the web has ``socially enabled'' many new digital media, transforming how developers learn about new technologies~\cite{storey_revolution_2014}.
+In the last ten years, millions of projects migrated to GitHub, a social code hosting site, and hundreds of thousands of packages of reusable software have been published on globally available and instantly accessible ``package indexes'' for the Ruby, JavaScript, and Python languages.
+Not only has reusable software moved online en masse, but so too has much of the documentation for this work.
+
+We see hazards in how developers select reusable components for software:
+A premium is placed on working source code examples~\cite{nykaza_what_2002};
+developers' tend to choose code that ``satisfices'' without thoroughly testing it~\cite{brandt_two_2009};
+APIs have unexpected and undocumented side effects~\cite{robillard_field_2011};
+programmers don't necessarily know how to understand the digital media they use;
+they report being overwhelmed by the volume of content; and they can't trust the quality of content~\cite{storey_revolution_2014}.
+
+We see challenge and solutions in helping developers better understand reusable components that they find online by capturing and summarizing fragmented information about its system image (i.e.\ documentation) and support history at the component level.
+We believe that such representations, shown in the right place when developers are choosing new components, reduce the hazards of poor reuse choices when developers lack media literacy, and can help programmers understand what components are safe to trust.
+
+In this paper, we describe how indications of content quality can be harvested on a package level from four top digital channels that developers use for development~\cite{storey_revolution_2014}, three of which are socially enabled: code hosting, Q\&A sites, web search, and micro-blogging.
+We focus specifically on reusable components at the resolution of packages, or self-contained libraries that can be installed from a package index and easily imported into one's code.
+We make this choice as packages have a system image that, although distributed and ``fragmented,'' is accessible through thoughtful and systematized queries to the search interfaces and APIs of social media and web search.
+
+Our primary contribution is that we build a system that creates summaries of package support quality by collecting fragmented information across digital channels and summarizes them in lightweight representations.
+We report how developers perceive the trustworthiness of software given these representations.
+We then suggest which channels appear to be the richest for conveying variation on the quality of reusable components to developers who have not seen them before.
+We present several example interfaces that show how these indications can be incorporated into modern interfaces where programmers seek help and may encounter the option to install packages.
+
+

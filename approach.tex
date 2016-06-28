@@ -1,0 +1,132 @@
+The objective for this study is to answer these questions.
+First, what channels are most helpful to developers predicting the quality of community and documentation available for packages?
+Second, what information and indications do they use from these channels to answer these questions?
+Third, what challenges do developers face when answering each question?
+
+We designed a study to elicit answers to these questions.
+Participants were given the names of two Python packages that they were supposed to compare in terms of quality of community and documentation.
+These packages were chosen related to a task the participant expressed interest in, though we made sure the participant had never used either of the packages before.
+
+We asked developers to attempt to answer six questions about the quality of the community and documentation:
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\item Which package will have \textbf{better How-To documentation} for all the tasks you will want to do?
+\item For which package are other developers more likely to answer questions you ask as \textbf{fast} as you need them to?
+\item Which package's documentation will be more \textbf{up-to-date} with the code?
+\item Which community will be more \textbf{welcoming} when responding to questions you ask?
+\item Which package's \textbf{developers can you better trust} to make reliable, usable software?
+\item Which package was better designed for users with \textbf{your technical knowledge} and goals?
+\end{enumerate}
+These questions came from a variety of sources referenced in our background work and from our peers.
+We had a hunch that there might be some appropriate information sources online for answering each of these questions, but we didn't know for sure, or the variety of different approaches that developers might take.
+
+For each question, participants were given six minutes to use the web to learn more about the two packages they were comparing, in order to arrive at an informed answer.
+\textbf{Warmup task}.
+
+We collected a variety of measures.
+We logged all URLs that participants visited along with timestamps of how long they spent on each site to determine how much time they were spending on each site to answer each question.
+We also requested that participants report the helpfulness of pages that they visited as ``very helpful'', ``somewhat helpful'', or ``not helpful'' for answering each question.
+(In practice, we had to remind them of this quite frequently, and received sparse ratings that did not cover many of the pages visited).
+We also asked participants to report their confidence in their comparison between the two packages, knowing that participants may only find a fraction of the available information on the web and in the time frame we gave them.
+
+We also asked participants to produce two forms of written feedback.
+Before they began to search to answer this question, they were asked to share a 1--2 sentence strategy of how they expected to find an answer to the question.
+We expect this not only allowed participants to mentally prepare for the upcoming task, but also allowed us to ask after the study which of their strategies didn't succeed.
+After they searched, we asked them to report what evidence they found most helpful for comparing the two packages.
+
+We have currently run the study with ten participants.
+\textbf{These participants have this background\ldots{}}.
+We report the results in the next section.
+
+We have made our Firefox addon for logging URL activity open source and available to the research community\footnote{\url{https://github.com/andrewhead/Web-Navigation-Logger}}.
+
+% These questions are pretty vague.
+% We think this is okay, because the task of assessing the documentation and support for a package is going to involve some prediction of the types of information needs one will need later, and is fundamentally a difficult and ill-posed problem.
+
+\if 0
+\subsection{Procedure}
+
+A participant is provided a web domain for a digital channel (GitHub, Stack Overflow, or Google search), and is asked to spend time on that domain (and that domain only) assessing the project's quality on one of the questions of quality.
+They do this $3\times3$ times, for 3 channels and 3 questions of quality.
+
+This design is within-subjects: all participants answer all questions for all channels.
+This provides us with additional information per participant.
+It also allows us to make claims based on how ratings for each question-channel pair vary between participants.
+We counterbalance the order of channels and questions to reduce the effect of learning on task completion, certainty, and ratings of quality.
+We use a separate Node package for each task.
+
+Each trial lasted at maximum 3 minutes long.
+Though participants could finish early if they felt they found all relevant information.
+After this time, participants were asked to stop and save their rating of quality and any notes they share.
+Participants were asked for their feedback in a Google Form.
+
+% In the current design, participants will be given three minutes for each task, but can finish as quickly as they want.
+% There will be three channels (code hosting site, Q\&A site, and micro-blogging site) and three questions (see the questions in the ``motivation'' section).
+We were originally planning on testing out a micro-blogging site, but during test runs with themselves, the researchers discovered that there these questions were difficult enough to answer with Twitter that it would be more interesting to see what participants did with Google search.
+With one minute between tasks, the main activity was expected to take 40--50 minutes total.
+
+We collected information about participants' demographics and background in a preliminary questionnaire.
+Participants performed a three-minute warmup task to familiarize themselves with the form and adjust to the time constraints we provided.
+Participants then completed a follow-up questionnaire where they were asked to rank channels by their effectiveness in answering each of the questions, describe what they found to be the most helpful cues overall for each question, and mention other sources of information they would want to see.
+\fi
+
+\if 0
+There is a covariate with the combination of channel and question: the package itself.
+If we do not include this covariate, there will be a learning confound from participants gaining knowledge about the support available for the package from past trials.
+We don't counterbalance the order of packages.
+We think this is okay, because we are not comparing for which packages quality is easiest to assess.
+We're only comparing which sites and questions are easier to answer questions about, and each site and question will get an equal distribution of each of the packages.
+Furthermore, the counterbalancing starts to get unintuitive and hard to follow at this point.
+
+We show some helpful notes for some of the packages.
+For instance, we explain that the ``python'' package is a package for Node.js, and not the Python language.
+We think that this is okay because we don't let participants view Google and so might need to give them some cues to make information discovery for the package tractable.
+Furthermore, we don't worry about biasing the results for individual packages for the reasons in the paragraph above.
+\fi
+
+To obtain a list of packages, I suggest fetching packages that participants are not certain to know (i.e.\ ones that aren't ubiquitous within the Node.js ecosystem), and that represent varying levels of popularity online.
+We make a heuristic for packages that have some documentation online.
+We look for the pattern \texttt{npm install <package\_name>} in all Stack Overflow posts tagged ``node.js'' or ``npm,'' and extract all distinct package names, counting how often that package name appears.
+We choose three packages from each of these percentile ranges: 5--10\%, 10--30\%, 30--100\%.
+We note that this might confound the Stack Overflow condition, as all packages will have at least a trivial amount of documentation.
+
+Some participants may already know about some of the packages and authors that we show them, if they have some level of community support and the developer has been working with Node.js for some time.
+We ask all participants to check boxes to report whether they have heard of and whether they have used each package.
+ We can use this to exclude some ratings from our analysis.
+ If they know of authors, this might not be problematic, as this could be indicative of a need to summarize packages in terms of those who created them.
+
+ \subsection{Measures}
+
+ \begin{itemize}
+ \item their confidence in their judgment
+ \item whether a participant completes a task in less time than was available 
+ \item ratings on a Likert scale of each quality question
+ \end{itemize}
+
+ \if 0
+ There are auxiliary questions that it would be useful for us to report on:
+ * How confident are participants of their responses?
+ * How does this confidence vary by channel and question?
+ * How appropriate does this channel's content and organization seem for answering this question?
+ * For each package, how often to participants end up looking at documentation that's not about that package at all (by accident)?
+ \fi
+
+ \subsection{Analysis}
+
+ We use the technique described in~\cite{kaptein_powerful_2010} to assess whether there is a difference between the distributions of confidence scores for both factors.
+ According to the recommendations from\footnote{\url{http://yatani.jp/teaching/doku.php?id=hcistats:kruskalwallis}}, we use a Mann-Whitney test for post-hoc pairwise comparisons.
+ In this way, we report which channels appear to be most capable of answering each question.
+
+ Confidence scores will also be useful in initially assessing whether there is any distribution for which confidence is more than positive.
+ If this assumption holds, then we can assert that there indeed are some channels for which such quality assessments are possible.
+
+ We do a qualitative coding of participants' comments for evidence of the cues and challenges of using each channel to answer these question; we will not look for quantitative significance in comments.
+
+ \subsection{Limitations}
+
+ We report some biases in the study design.
+ One of the reasons that we include web search is because we already have some code written to collect data about web search, and an on-going theme of our work is to understand how to help programmers search better.
+
+ The script that we used to generate forms for our study can be found online at \url{http://tinyurl.com/support-views-study-script}.
