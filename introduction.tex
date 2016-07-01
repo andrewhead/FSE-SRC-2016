@@ -5,7 +5,7 @@ The knowledge and conversations of programmers are increasingly distributed acro
 
 About a decade ago, Johnson et al.~\cite{johnson_improving_2005} described how collecting and displaying software telemetry data could help developers make sense of the many streams of measurements one could collect about their software project and process, including build failures, crashes, and source code contributions.
 Across builds, coding, and runtime, Johnson et al.\ provided a set of sensors and the metrics they would collect.
-Continuous monitoring of diverse signals could enable developers to make better products, with the right interfaces.
+Continuous monitoring of the right signals could enable development teams improve process with the right interfaces.
 % For similar reasons, dashboards~\cite{treude_awareness_2010} can help developers keep track of their teammates and checkpoints on software by better capturing thick incoming information in interfaces that integrate well into the development environment.
 
 We propose Johnson et al.'s work is currently missing a category of sensors that is increasingly relevant to clients and maintainers of open source software:
@@ -31,8 +31,8 @@ This, together with open-ended feedback, allows us to see where signals for answ
 
 There are several online tools we see as precursors to much more powerful socially-enabled telemetry systems.
 %Slant\footnote{\url{http://www.slant.co/}} allows developers to request comparisons of alternatives of packages for programming tasks like drawing libraries and package managers through bite-sized bullet point pros and cons written by peers.
-Awesome Python\footnote{\url{https://python.libhunt.com/}} generates comparisons of arbitrary pairs of Python packages\footnote{\url{https://python.libhunt.com/project/pygame/vs/panda3}}, with popularity and activity metrics presumably based on download counts and commit activity.
-Ruby Toolbox\footnote{\url{https://www.ruby-toolbox.com/}} and the `packagequality' widget\footnote{\url{http://packagequality.com/}} compute package quality ratings that draw on download counts, responses to issues, and GitHub stars.
+Awesome Python\footnote{\url{https://python.libhunt.com/}} generates comparisons of arbitrary pairs of Python packages\footnote{\url{https://python.libhunt.com/project/pygame/vs/panda3}}, with an activity metrics based on commit frequency and an opaque numerical measurement of popularity.
+Ruby Toolbox\footnote{\url{https://www.ruby-toolbox.com/}} and the `packagequality' widget\footnote{\url{http://packagequality.com/}} also summarize package qualities with numerical ratings, where `packagequality' relies on issue response rates, download count, and version count.
 While these can be proxies for a package's quality, we believe that this isn't enough for understanding the social life of packages.
 When using packages, developers are concerned with the trustworthiness of developers~\cite{robillard_field_2011}, how up-to-date the documentation is~\cite{storey_revolution_2014,nykaza_what_2002,lethbridge_how_2003,robillard_field_2011}, and whether the community is anti-social~\cite{storey_revolution_2014}.
 
