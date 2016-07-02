@@ -1,22 +1,36 @@
+We observed several noteworthy strategies participants took to learn about a package's social health.
+First, it was important that they actually read text to assess social health.
+They skimmed text from conversations to determine how welcoming communities were.
+They read texts from documentation about a project's API and its mission and philosophy to determine if a package was designed for users like them.
+Many tools for package comparisons show only summary statistics about a package (e.g.~\cite{awesome_python,ruby_toolbox}.
+We think this seriously limits the helpfulness of these tools.
+
+Participants queried the web through search engines to find pre-built summaries describing the community and documentation.
+They consulted issue reports to determine how up-to-date documentation was.
+They found explicit comparisons of packages on Reddit, and user testimonials on Quora.
+% On these channels, the presence or absence of information can be an answer in itself.
+When they looked at texts of questions, documents, and issue reports, they chose a handful of pages from dozens or even hundreds.
+While their choices appeared to be informed at least partly by what appeared on the pages they were currently visiting, we hope future analysis will provide further insight into just how participants chose pages to visit.
+
 % We are in the process of collecting developers' pathways through web documents when they answer social questions about packages.
-Our data provides us with a rich picture of where developers find social signals.
-We show a portrait in Figure~\ref{fig:visits} for just one developer answering three of the six questions.
-Many channels that have been recently described as important to programmers---code hosting, web search, and Q\&A sites~\cite{storey_how_2016}---all have their place here, for various concerns.
-Developers offload questions about the recency of documentation to GitHub issues, commit histories, and pull request contents;
-they ask Stack Overflow, Reddit, and Google Groups about how welcoming communities are;
-and GitHub profiles help determine developer histories.
+Our URL log data suggests where participants find social health cues.
+Figure~\ref{fig:visits} shows the location of cues for one developer answering three of the six questions.
+Developers visited important communication channels~\cite{storey_revolution_2014}, including code hosting, web search, and Q\&A sites.
+To summarize, we have seen participants find:
+(1) whether a community is welcoming by viewing Q\&A sites and discussions on Reddit and Google Groups;
+(2) documentation recency by viewing issue reports, code contribution histories, and pull request contents;
+(3) the trustworthiness of developers by viewing issue reports, and profiles on code hosting sites.
+We leave quantitative analysis of these trends and a full exploration of specific cues from these sites for future work.
 
-We want to highlight a few guidelines that we anticipate for the design of social signals, based on the strategies we have seen developers undertake when answering these questions about packages.
-First, references to text are necessary when developers are determining how welcoming communities are, and to understand whether their background matches that of the intended user.
-Second, developers delegate questions to Google, Reddit, Quora, and blog posts.
-On these channels, the presence or absence of information can be an answer in itself.
-Third, given the organization of the web, developers inevitably need to sample questions, documents, and issues to approximate answers to complex questions about packages.
+Our preliminary results confirm a need for search tools that reveal obscure information about social health quickly.
+Participants frequently realized they missed important information after twenty or thirty minutes of learning about a package.
+This included wrongly assessing a package had no community at all, failing to find a newer version of the package under a different name, and missing a large repository of example code by the package's developers.
+%searching that changes their perception of a package, often only after the right question is asked---for example, discovering that a package's primary maintainer has been inactive for two years.
+Negative judgments could be costly to reverse.
+One participant read source code before realizing that one package's programming API was preferable to one he favored before.
 
-Furthermore, these preliminary findings motivate the need for better client-facing socially-enabled software telemetry displays.
-It is common for a participant in our study to make a realization after twenty or thirty minutes of searching that changes their perception of a package, often only after the right question is asked---for example, discovering that a package's primary maintainer has been inactive for two years.
-Furthermore, whearas quickly skimming pages for a package may provide a surface-level understanding of it's quality, we have seen that serious, sustained attention to the right code and documentation can help developers overcome early biases and premature negative judgments.
-We believe that the obstacles developers face uncovering the true nature and strengths of packages is a product of developers' processes and the limitations of current information interfaces.
-It's only with attention to both of these that we will be able to design the first generation of telemetry systems for helping developers answer deep, complex, social questions about software projects.
+We believe these obstacles are a product of developers' habits and the limitations of current information interfaces.
+With attention to both, we can design more powerful search tools to help developers quickly and effectively learn about packages' social health when choosing between them.
 
 \if 0
 Include the major insights that developers had during the study.

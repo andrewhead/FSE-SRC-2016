@@ -1,19 +1,18 @@
-Developers work in an immense online network.
-This has benefits, enabling them to leverage social media and other channels to stay informed and connect with other developers~\cite{singer_software_2014,storey_how_2016}.
-Today there is a proliferation of socially-enabled channels~\cite{storey_revolution_2014} through which developers answer each others questions~\cite{mamykina_fastest_2011}, help each other overcome bugs and learn new tools~\cite{parnin_blogging_2013}, and share information in many different forms at many different speeds.
-The knowledge and conversations of programmers are increasingly distributed across the web.
+How should a developer choose a package from among many choices?
+This question gets more difficult each day as new open source packages are published.
+There is a pressing need for tools that support this decision.
+We want to build visualizations and search tools to help developers make such choices more quickly and effectively.
 
-About a decade ago, Johnson et al.~\cite{johnson_improving_2005} described how collecting and displaying software telemetry data could help developers make sense of the many streams of measurements one could collect about their software project and process, including build failures, crashes, and source code contributions.
-Across builds, coding, and runtime, Johnson et al.\ provided a set of sensors and the metrics they would collect.
-Continuous monitoring of the right signals could enable development teams improve process with the right interfaces.
-% For similar reasons, dashboards~\cite{treude_awareness_2010} can help developers keep track of their teammates and checkpoints on software by better capturing thick incoming information in interfaces that integrate well into the development environment.
+We start by asking what information matters to developers.
+Typically, developers make choices based on functionality and quality of documentation.
+We suggest that as social communication channels become intertwined with the development process~\cite{storey_revolution_2014},
+developers need to understand the ``social health'' of a package's community before they use it.
+We define a package as \textit{socially healthy} when one can reliably get good answers from a package's forums, mailing lists, and other communication channels.
 
-We propose Johnson et al.'s work is currently missing a category of sensors that is increasingly relevant to clients and maintainers of open source software:
-social information on the web.
-We concern ourselves with the study of social signals mineable from the web and salient to project clients and maintainers, and the design of interfaces that integrate into the development environment to help developers monitor their projects and choose the right packages.
-In this abstract, we focus on the first of these:
-a study about what information on the web helps developers answer questions about the social health of open source projects.
-We believe this is an important first step to discovering what sensors are the right ones for socially-enabled software telemetry.
+We ran a study with developers to find out how they currently learn about the social health of packages.
+We contribute preliminary results from this study, including the following:
+(1) Developers seek out common cues when answering the same questions about a package's social health;
+(2) They rely on texts of issue reports, documents, and conversations to assess social health.
 
 \begin{figure*}
 \centering
@@ -21,57 +20,10 @@ We believe this is an important first step to discovering what sensors are the r
 \caption{%
 We asked developers to answer questions about the social health of open source projects,
 specifically their community, documentation, and developers.
-This plot shows the search behavior of a single participant for three such questions.
-Relevant signals are distributed across the web.
-This participant viewed seven questions on Stack Overflow, four issues on GitHub, and three conversations on Google Groups conversations to determine which of two packages had a more welcoming community.
-This, together with open-ended feedback, allows us to see where signals for answering social questions reside on the web.
+This plot shows the search behavior of a single participant for three of the six questions.
+This participant viewed many documents to judge the difference in social health between two packages.
+To determine which package had a more welcoming community, they viewed seven questions on Stack Overflow, four issues on GitHub, and three conversations on Google Groups.
+% This, together with open-ended feedback, allows us to see where signals for answering social questions reside on the web.
 }
 \label{fig:visits}
 \end{figure*}
-
-There are several online tools we see as precursors to much more powerful socially-enabled telemetry systems.
-%Slant\footnote{\url{http://www.slant.co/}} allows developers to request comparisons of alternatives of packages for programming tasks like drawing libraries and package managers through bite-sized bullet point pros and cons written by peers.
-Awesome Python\footnote{\url{https://python.libhunt.com/}} generates comparisons of arbitrary pairs of Python packages\footnote{\url{https://python.libhunt.com/project/pygame/vs/panda3}}, with an activity metrics based on commit frequency and an opaque numerical measurement of popularity.
-Ruby Toolbox\footnote{\url{https://www.ruby-toolbox.com/}} and the `packagequality' widget\footnote{\url{http://packagequality.com/}} also summarize package qualities with numerical ratings, where `packagequality' relies on issue response rates, download count, and version count.
-While these can be proxies for a package's quality, we believe that this isn't enough for understanding the social life of packages.
-When using packages, developers are concerned with the trustworthiness of developers~\cite{robillard_field_2011}, how up-to-date the documentation is~\cite{storey_revolution_2014,nykaza_what_2002,lethbridge_how_2003,robillard_field_2011}, and whether the community is anti-social~\cite{storey_revolution_2014}.
-
-As developers will often have to make trade-offs between these factors when choosing software, we are skeptical that anything short of carefully selected and arranged samples from socially-enabled channels can help a developer make a truly informed judgment about a package's community when evaluating software and, after on-boarding, choosing how to ask for help.
-This abstract presents our inquiry into what these samples from developers' socially-enabled networks and web pages should be.
-
-\if 0
-Software developers decide to reuse software to save time~\cite{mili_reusing_1995}.
-Researchers have observed that given a task, developers can assemble working programs through components found entirely on the web, together with their prior knowledge (e.g.,~\cite{brandt_two_2009}).
-This behavior is not uncommon---foraging for information online has been observed in particular for a variety of non-professional programmers~\cite{brandt_opportunistic_2008} and validated through the queries for a help search engine for developer tools~\cite{brandt_two_2009}.
-
-Though there are hazards in how developers select reusable components for software in practice.
-A premium is placed on working source code examples~\cite{nykaza_what_2002}.
-Developers' tend to choose code that ``satisfices'' without thoroughly testing it~\cite{brandt_two_2009}.
-APIs have unexpected and undocumented side effects~\cite{robillard_field_2011}.
-And despite a rise of ``socially enabled'' digital media for communicating about software, programmers face challenges using these channels:
-they may be overwhelmed by the amount of content and distrust its quality~\cite{storey_revolution_2014}.
-
-In this study, we present a view of how developers learn about packages on socially enabled channels.
-Through this study, we highlight two problems:
-First, programmers attempt to make sense of distributed information online.
-Second, some information is hidden from view, only to be discovered after tens of minutes of inspection.
-For us, these findings will motivate the design of new search systems for developers looking for resuable software components.
-\fi
-
-% We believe that such representations, shown in the right place when developers are choosing new components, reduce the hazards of poor reuse choices when developers lack media literacy, and can help programmers understand what components are safe to trust.
-
-\if 0
-The past five decades of software engineering have seen the rise of digital media for programmer communication and information sharing.
-As of the '90s, the web has ``socially enabled'' many new digital media, transforming how developers learn about new technologies~\cite{storey_revolution_2014}.
-In the last ten years, millions of projects migrated to GitHub, a social code hosting site, and hundreds of thousands of packages of reusable software have been published on globally available and instantly accessible ``package indexes'' for the Ruby, JavaScript, and Python languages.
-Not only has reusable software moved online en masse, but so too has much of the documentation for this work.
-
-In this paper, we describe how indications of content quality can be harvested on a package level from four top digital channels that developers use for development~\cite{storey_revolution_2014}, three of which are socially enabled: code hosting, Q\&A sites, web search, and micro-blogging.
-We focus specifically on reusable components at the resolution of packages, or self-contained libraries that can be installed from a package index and easily imported into one's code.
-We make this choice as packages have a system image that, although distributed and ``fragmented,'' is accessible through thoughtful and systematized queries to the search interfaces and APIs of social media and web search.
-
-Our primary contribution is that we build a system that creates summaries of package support quality by collecting fragmented information across digital channels and summarizes them in lightweight representations.
-We report how developers perceive the trustworthiness of software given these representations.
-We then suggest which channels appear to be the richest for conveying variation on the quality of reusable components to developers who have not seen them before.
-We present several example interfaces that show how these indications can be incorporated into modern interfaces where programmers seek help and may encounter the option to install packages.
-\fi

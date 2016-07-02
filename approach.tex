@@ -1,20 +1,36 @@
+\if 0
 A space of tools for socially-enabled software telemetry has several dimensions.
 They can satisfy clients seeking to learn more about projects or maintainers understanding the conversations users are having with this project and others.
 Telemetry systems can make use of signals, where signals shown to users should convey understanding about one of at least three concerns:
 the community, the documentation, or the developers.
 For this work, we are concerned with the question:
 what signals can package clients use to answer questions about packages' communities, documentation, and developers, and where should they come from?
+\fi
 
-To answer this question, we present preliminary results from an in-progress study.
-We invited developers to partake in a 90-minute study where they were asked to evaluate two packages.
-We asked them to compare the packages with respect to their quality on six social dimensions related to community, documentation and developers, inspired from literature and conversations with software developers.
-We asked participants to use only the web to answer these questions.
-Even though developers often get their questions answered face-to-face~\cite{latoza_maintaining_2006,storey_revolution_2014}, over email~\cite{latoza_maintaining_2006,ko_information_2007}, or even just trying out code~\cite{brandt_two_2009}, we focus specifically on information that resides on the web, as we feel this will form the basis for mineable signals for socially-enabled software telemetry.
+% To answer this question, we present preliminary results from an in-progress study.
+We invited developers to a study where they compared the social health of two packages.
+We asked them six questions about the packages' community, documentation, and developers.
+These were based on related work and conversations with software developers.
+Our questions included:
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}  
+\item Which community will be more welcoming when responding to questions you ask?
+\item Which package's documentation will be more up-to-date with the code?
+\item Which package's developers can you better trust to make reliable, usable software?
+\end{itemize}
+These three questions (out of six) were based on observations of anti-social behavior in developers' communication channels~\cite{storey_revolution_2014}, concerns about how up-to-date documentation is~\cite{storey_revolution_2014,nykaza_what_2002,lethbridge_how_2003,robillard_field_2011}, and how developers assess code example quality based on author reputation~\cite{robillard_field_2011}.
+% These questions were chosen based on related work (including~\cite{storey_revolution_2014,nykaza_what_2002,lethbridge_how_2003,robillard_field_2011}) and conversations with software developers.
 
-We collect three measurements of signals developers use to answer social questions:
-a timestamped log of URLs they visit;
+Participants answered the questions using the web.
+We note developers often get answers face-to-face~\cite{latoza_maintaining_2006,storey_revolution_2014}, over email~\cite{latoza_maintaining_2006,ko_information_2007}, or by trying out code~\cite{brandt_two_2009}.
+However, we focus on information on the web, as we believed this would reveal signals we could incorporate into future search tools.
+
+We collected three measurements of cues participants used to answer social questions:
+a timestamped log of URLs they visited;
 self-reported ratings of web pages' ``helpfulness'' for answering each question;
-and open-ended responses of what evidence on the web was most helpful for comparing the social health of the two packages for each dimension.
+and open-ended responses of what evidence on the web was most helpful for comparing the social health of the two packages for each question.
 We report a view of our current results here.
 
 \if 0
