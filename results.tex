@@ -1,35 +1,39 @@
 We observed several noteworthy strategies participants took to learn about a package's social health.
-First, it was important that they actually read text to assess social health.
-They skimmed text from conversations to determine how welcoming communities were.
-They read texts from documentation about a project's API and its mission and philosophy to determine if a package was designed for users like them.
-Many tools for package comparisons show only summary statistics about a package (e.g.~\cite{awesome_python,ruby_toolbox}).
-We think this seriously limits the helpfulness of these tools.
+First, participants read relevant text to assess social health.
+In particular, the participants skimmed text from conversations to determine how welcoming communities were.
+Participants also read texts from documentation about a project's API and development philosophy to determine if a package was designed for users with their backgrounds and goals.
+Existing package comparison tools do not support reading relevant conversations and documentation.
+Instead, such tools only show summary statistics (e.g.~\cite{awesome_python,ruby_toolbox}).
 
+Participants sometimes looked for social health in the form of advice from current users of a package.
 Participants queried the web through search engines to find pre-built summaries describing the community and documentation.
-They consulted issue reports to determine how up-to-date documentation was.
-They found explicit comparisons of packages on Reddit, and user testimonials on Quora.
+Participants found explicit comparisons of packages on Reddit, and user testimonials on Quora.
+One participant consulted issue reports to determine how up-to-date documentation was.
 % On these channels, the presence or absence of information can be an answer in itself.
-When they looked at texts of questions, documents, and issue reports, they chose a handful of pages from dozens or even hundreds.
-While their choices appeared to be informed at least partly by what appeared on the pages they were currently visiting, we hope future analysis will provide further insight into just how participants chose pages to visit.
+When participants looked at texts of questions, documents, and issue reports, they chose a handful of pages from dozens or even hundreds.
+% While their choices appeared to be informed at least partly by what appeared on the pages they were currently visiting, we hope future analysis will provide further insight into just how participants chose pages to visit.
 
 % We are in the process of collecting developers' pathways through web documents when they answer social questions about packages.
-Our URL log data suggests common places where participants find social health cues.
-Figure~\ref{fig:visits} shows the location of cues for one developer answering three of the six questions.
-Developers visited important communication channels~\cite{storey_revolution_2014}, including code hosting, web search, and Q\&A sites.
-To summarize, we have seen participants find:
+Our URL log data suggests common places where participants found social health cues.
+Participants relied on different types of web pages when answering each social health question.
+% Developers visited important communication channels~\cite{storey_revolution_2014}, including code hosting, web search, and Q\&A sites.
+We have seen participants find:
 (1) whether a community is welcoming by viewing Q\&A sites and discussions on Reddit and Google Groups;
 (2) documentation recency by viewing issue reports, code contribution histories, and pull request contents;
 (3) the trustworthiness of developers by viewing issue reports, and profiles on code hosting sites.
+Figure~\ref{fig:visits} shows a cross-section of the URLs one participant visited when answering three of the six questions.
 We leave quantitative analysis of these trends and a full exploration of specific cues from these sites for future work.
 
 Our preliminary results confirm a need for search tools that reveal obscure information about social health quickly.
 Participants frequently realized they missed important information after twenty or thirty minutes of learning about a package.
-This included wrongly assessing a package had no community at all, failing to find a newer version of the package under a different name, and missing a large repository of example code by the package's developers.
+One participant wrongly assessed a package had no community at all.
+Another participant failed to find newer version of a package under a different name.
+And another participant missed large repositories of example code written by the package's developers.
 %searching that changes their perception of a package, often only after the right question is asked---for example, discovering that a package's primary maintainer has been inactive for two years.
-Negative judgments could be costly to reverse.
+Such incorrect judgments could be costly to reverse:
 One participant read source code before realizing that one package's programming API was preferable to one he favored before.
 
-We believe these obstacles are a product of developers' habits and the limitations of current information interfaces.
+We believe these incorrect judgments are a product of developers' habits and the limitations of current information interfaces.
 With attention to both, we can design more powerful search tools to help developers quickly and effectively learn about packages' social health when choosing between them.
 For now, these preliminary results suggest that
 package consumers should not trust their initial instincts,

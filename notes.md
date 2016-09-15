@@ -3,6 +3,7 @@
 * Register for the conference
 * Due on September 15
 * Submit XML
+* Split the final page
 
 ## Done
 
