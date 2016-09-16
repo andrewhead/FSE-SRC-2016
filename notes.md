@@ -1,12 +1,12 @@
 # Requirements
 
-* Register for the conference
 * Due on September 15
 * Submit XML
 * Split the final page
 
 ## Done
 
+* Register for the conference (done)
 * "toappear" tag (done)
 * Make sure it has vector graphics (done)
 * Include country of affiliation (done)
